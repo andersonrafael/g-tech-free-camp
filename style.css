@@ -40,7 +40,7 @@ section {
     text-align: justify;
 }
 
-/* Estilos para a lista de habilidades - EFEITO NEON */
+/* Estilos para a lista de habilidades - EFEITO NEON HOVER */
 .skills ul {
     list-style-type: none;
     padding: 0;
@@ -54,31 +54,16 @@ section {
     position: relative;
     overflow: hidden;
     cursor: default;
-    color: transparent;
-    border: 2px solid transparent;
     background-color: #1a1a1a;
-    text-shadow: 0 0 5px currentColor;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: all 0.4s ease;
+    
+    /* Estado normal (visível) */
+    color: #e0e0e0;
+    border: 2px solid #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Efeito neon para cada skill */
-.skill-html {
-    border-color: #ff2a2a;
-    box-shadow: 0 0 10px #ff2a2a, inset 0 0 10px #ff2a2a;
-}
-
-.skill-css {
-    border-color: #00a2ff;
-    box-shadow: 0 0 10px #00a2ff, inset 0 0 10px #00a2ff;
-}
-
-.skill-js {
-    border-color: #ffee00;
-    box-shadow: 0 0 10px #ffee00, inset 0 0 10px #ffee00;
-}
-
-/* Efeito ao passar o mouse */
+/* Efeito neon ao passar o mouse */
 .skills li:hover {
     transform: translateY(-3px);
     text-shadow: 0 0 10px currentColor;
@@ -86,23 +71,26 @@ section {
 
 .skill-html:hover {
     color: #ff2a2a;
+    border-color: #ff2a2a;
     box-shadow: 0 0 20px #ff2a2a, inset 0 0 15px #ff2a2a;
 }
 
 .skill-css:hover {
     color: #00a2ff;
+    border-color: #00a2ff;
     box-shadow: 0 0 20px #00a2ff, inset 0 0 15px #00a2ff;
 }
 
 .skill-js:hover {
     color: #ffee00;
+    border-color: #ffee00;
     box-shadow: 0 0 20px #ffee00, inset 0 0 15px #ffee00;
 }
 
-/* Pulsação neon */
+/* Pulsação neon apenas no hover */
 @keyframes neonPulse {
     0%, 100% {
-        opacity: 0.8;
+        opacity: 0.9;
     }
     50% {
         opacity: 1;
@@ -114,7 +102,7 @@ section {
     animation: neonPulse 1.5s infinite;
 }
 
-/* Texto com brilho neon */
+/* Nível de habilidade */
 .skills li::after {
     content: attr(data-level);
     position: absolute;
@@ -123,29 +111,27 @@ section {
     transform: translateY(-50%);
     font-size: 0.9em;
     opacity: 0.7;
-    text-shadow: none;
 }
 
 .skills li:hover::after {
     opacity: 1;
+    text-shadow: none;
 }
 
-/* Animações de entrada neon */
-@keyframes neonEntrance {
+/* Animações de entrada */
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateX(-30px);
-        filter: blur(5px);
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
-        transform: translateX(0);
-        filter: blur(0);
+        transform: translateY(0);
     }
 }
 
 .skills li {
-    animation: neonEntrance 0.8s ease forwards;
+    animation: fadeIn 0.6s ease forwards;
     opacity: 0;
 }
 
