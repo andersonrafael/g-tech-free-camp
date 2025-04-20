@@ -1,58 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    
+    <!-- Tag Style -->
+    <style>
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+    </style>
+    
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
 <body>
+    <header>
+        <!-- Estilo Inline -->
+        <h1 style="color: #7f8c8d;">Francisco Anderson</h1>
+        
+        <!-- Atributo Style -->
+        <p style="font-size: 18px; color: #7f8c8d;">
+            Desenvolvedor Web Front-end com experiência em HTML, CSS e JavaScript.
+        </p>
+    </header>
+    
     <main>
-      <h1>CatPhotoApp</h1>
-      <section>
-        <h2>Cat Photos</h2>
-        <p>Everyone loves <a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg">cute cats</a> online!</p>
-        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
-      </section>
-      <section>
-        <h2>Cat Lists</h2>
-        <h3>Things cats love:</h3>
-        <ul>
-          <li>catnip</li>
-          <li>laser pointers</li>
-          <li>lasagna</li>
-        </ul>
-        <figure>
-          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
-          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
-        </figure>
-        <h3>Top 3 things cats hate:</h3>
-        <ol>
-          <li>flea treatment</li>
-          <li>thunder</li>
-          <li>other cats</li>
-        </ol>
-        <figure>
-          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
-          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
-        </figure>
-      </section>
-      <section>
-        <h2>Cat Form</h2>
-        <form action="https://freecatphotoapp.com/submit-cat-photo">
-          <fieldset>
-            <legend>Is your cat an indoor or outdoor cat?</legend>
-            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
-            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
-          </fieldset>
-          <fieldset>
-            <legend>What's your cat's personality?</legend>
-            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
-            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
-            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
-          </fieldset>
-          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
-          <button type="submit">Submit</button>
-        </form>
-      </section>
+        <section class="bio">
+            <h2>Sobre Mim</h2>
+            <p>
+                Sou um apaixonado por tecnologia e desenvolvimento web. 
+                Atualmente estou cursando Análise e Desenvolvimento de Sistemas 
+                e buscando minha primeira oportunidade no mercado.
+            </p>
+        </section>
+        
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li class="skill-html" data-level="80%">HTML5</li>
+                <li class="skill-css" data-level="70%">CSS3</li>
+                <li class="skill-js" data-level="60%">JavaScript</li>
+            </ul>
+        </section>
+        
+        <section class="projects">
+            <h2>Projetos</h2>
+            <div class="project-card">
+                <h3>Site Pessoal</h3>
+                <p>Desenvolvimento de um portfólio online.</p>
+            </div>
+            <div class="project-card">
+                <h3>Landing Page</h3>
+                <p>Criação de uma página de captura responsiva.</p>
+            </div>
+        </section>
     </main>
+    
     <footer>
-      <p>
-        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
-      </p>
+        <p>Contato: franciscoandersonrafael@gmail.com | (85) 99982-2417</p>
     </footer>
-  </body>
+</body>
 </html>

@@ -1,0 +1,199 @@
+/* Estilos para o corpo do documento */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Estilos para cabeçalhos principais */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 2.5em; /* Unidade relativa */
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5em;
+}
+
+/* Estilos para seções */
+section {
+    margin-bottom: 2em;
+    padding: 1.5em;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilos para parágrafos dentro da div bio */
+.bio p {
+    font-size: 1.1em;
+    color: #34495e;
+    text-align: justify;
+}
+
+/* Estilos para a lista de habilidades - EFEITO NEON */
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    color: transparent;
+    border: 2px solid transparent;
+    background-color: #1a1a1a;
+    text-shadow: 0 0 5px currentColor;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+/* Efeito neon para cada skill */
+.skill-html {
+    border-color: #ff2a2a;
+    box-shadow: 0 0 10px #ff2a2a, inset 0 0 10px #ff2a2a;
+}
+
+.skill-css {
+    border-color: #00a2ff;
+    box-shadow: 0 0 10px #00a2ff, inset 0 0 10px #00a2ff;
+}
+
+.skill-js {
+    border-color: #ffee00;
+    box-shadow: 0 0 10px #ffee00, inset 0 0 10px #ffee00;
+}
+
+/* Efeito ao passar o mouse */
+.skills li:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 0 10px currentColor;
+}
+
+.skill-html:hover {
+    color: #ff2a2a;
+    box-shadow: 0 0 20px #ff2a2a, inset 0 0 15px #ff2a2a;
+}
+
+.skill-css:hover {
+    color: #00a2ff;
+    box-shadow: 0 0 20px #00a2ff, inset 0 0 15px #00a2ff;
+}
+
+.skill-js:hover {
+    color: #ffee00;
+    box-shadow: 0 0 20px #ffee00, inset 0 0 15px #ffee00;
+}
+
+/* Pulsação neon */
+@keyframes neonPulse {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 15px currentColor;
+    }
+}
+
+.skills li:hover {
+    animation: neonPulse 1.5s infinite;
+}
+
+/* Texto com brilho neon */
+.skills li::after {
+    content: attr(data-level);
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9em;
+    opacity: 0.7;
+    text-shadow: none;
+}
+
+.skills li:hover::after {
+    opacity: 1;
+}
+
+/* Animações de entrada neon */
+@keyframes neonEntrance {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+.skills li {
+    animation: neonEntrance 0.8s ease forwards;
+    opacity: 0;
+}
+
+.skills li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skills li:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.skills li:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+/* Estilos para os cartões de projeto */
+.project-card {
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #22292b;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #e2e9f0;
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+/* Media query para responsividade */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    section {
+        padding: 1em;
+    }
+}
